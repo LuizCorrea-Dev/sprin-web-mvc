@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
+
 @Controller
 public class JediController {
 
@@ -25,6 +27,10 @@ public class JediController {
 
         final ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("jedi");
+
+//        final Jedi luke = new Jedi("Luke", "Skywalker");
+//        modelAndView.addObject("allJedi", List.of(luke));
+
         modelAndView.addObject("allJedi", repository.getAll());
 
         return modelAndView;

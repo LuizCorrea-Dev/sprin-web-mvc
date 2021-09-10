@@ -18,7 +18,6 @@ public class Jedi {
     }
 
     public Jedi () {
-
     }
 
     public String getName () {
